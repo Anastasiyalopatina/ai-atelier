@@ -1,0 +1,26 @@
+{
+  "name": "ai-atelier",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "smoke:codex": "node scripts/probe-codex.mjs",
+    "smoke:web": "node scripts/probe-web.mjs",
+    "dev": "node scripts/launcher.mjs --dev",
+    "start": "node scripts/launcher.mjs",
+    "test": "node --test tests/smoke/*.test.mjs tests/security/*.test.mjs",
+    "test:research": "node scripts/test-research.mjs",
+    "test:ui": "tsc --noEmit",
+    "test:qa": "npm test",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build --config apps/web/vite.config.ts",
+    "publish:check": "node scripts/publish-check.mjs"
+  },
+  "dependencies": { "react": "19.3.1", "react-dom": "19.3.1" },
+  "devDependencies": {
+    "@types/node": "26.6.5", "@types/react": "19.3.0", "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2", "vite": "8.3.5"
+  }
+}

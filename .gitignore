@@ -1,0 +1,26 @@
+# User data and credentials are never source code.
+.env
+.env.*
+!.env.example
+.codex/
+.aws/
+auth.json
+*.pem
+*.key
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+*.jsonl
+data/
+runtime/
+backups/
+exports/
+imports/
+diagnostics/
+node_modules/
+.tools/
+dist/
+coverage/
+.DS_Store
